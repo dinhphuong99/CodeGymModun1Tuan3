@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var soTien = parseInt(prompt("Số tiền ban đầu (đ) là: "));
+    var soThang = parseInt(prompt("Số tháng cho vay là: "));
+    var laiSuat = parseInt(prompt("Lãi suất hàng tháng (%)là: "));
+    var laiSuat1 = laiSuat/100;
+    var TongTien = 0;
+
+    for(let i =0; i<soThang;i++){
+        TongTien += (TongTien*(1+laiSuat1));
+    }
+
+    alert("Tổng số tiền là: " + TongTien);
+</script>
+</html>
