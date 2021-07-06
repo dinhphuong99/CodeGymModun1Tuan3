@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a = 1;
+    var b = 1;
+    var tong = 2;
+    var count = 2;
+
+    while(count <=20){
+        if(a <=b){
+            a = a + b;
+            tong +=a;
+            count++;
+        }else{
+            b = a + b;
+            tong +=b;
+            count++;
+        }
+    }
+
+    document.write(tong);
+</script>
+</html>
