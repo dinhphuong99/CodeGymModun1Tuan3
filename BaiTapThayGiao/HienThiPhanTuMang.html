@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var arr = [];
+    var number = 20;
+    // number = parseInt(prompt("Nhập số phần tử của mảng:"));
+    var arrlength = 0;
+
+    // while(arrlength < number){
+    //     arr[arrlength] = parseInt(prompt("Nhập phần tử: "));
+    //     arrlength+=1;
+    // }//đúng
+
+    // for (var index = 0; index < number; index++) {
+    //     arr[index] = parseInt(prompt("Nhập phần tử: "));
+    // }//đúng
+
+    // BTVN Sinh ra các pt 10 ->25 
+    // Nhập giá trị 10 ->25
+    // nếu có ht tất cả không có thì ra -1
+
+    // sinh 1 mangr 5,7 các giá trị ngẫu nhiên 10->90 
+
+    while (arrlength < number) {
+        arr[arrlength] = Math.floor((Math.random() * 4) + 39);
+        arrlength += 1;
+    }//đúng
+
+    document.write(`${arr} "<br>"`);
+
+    // var find = true;
+    // for (let i = 0; i < arr.length; i++) {
+    //     document.write(arr[i] + ";");
+
+    //     if (40 == arr[i]){
+    //         find = true;
+    //         break;
+    //     }else if (i == (arr.length - 1))
+    //         find = false;
+    // }
+
+    // find? alert("Có số 40"):alert("Không có số 40");
+    //var viTri = -1;
+
+    var loCaTion = [];
+    var indexLocation = 0;
+    for (let index = 0; index < arr.length; index++) {
+
+        if (40 == arr[index]) {
+            loCaTion[indexLocation] = index;
+            indexLocation = indexLocation+1;
+        }else if(index == arr.length)
+            loCaTion[0] = -1;
+    }
+    document.write(`Có số 40 ở vị trí: ${loCaTion}`);
+</script>
+
+</html>

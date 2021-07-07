@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h6>
+            Vietnamese
+        </h6>
+        <input type="text" id = "vietnamese">
+        <h6>
+            English
+        </h6>
+        <input type="text" id = "english">
+        <br>
+        <input type="button" id = "translate" value="Translate" onclick="translate1()">
+        <input type="button" id = "save" value="Save" onclick="save1()">
+
+    </div>
+</body>
+<script>
+    var vietnam = ["chữ", "vị trí"];
+    var eng = ["word","location"];
+    // alert(vietnam.length);
+
+    function save1() {
+        vietnam[vietnam.length+1] = document.getElementById("vietnamese").value;
+        // document.getElementById("vietnamese").value = '';
+        eng[eng.length+1] = document.getElementById("english").value;
+        // document.getElementById("english").value = '';
+    };
+
+    var word = document.getElementById("vietnamese").value;
+
+    function translate1(){
+        for (let index = 0; index < vietnam.length; index++) {
+            vietnam[index] = word;
+            document.getElementById("english").value = eng[index];
+        }
+    }
+</script>
+</html>
