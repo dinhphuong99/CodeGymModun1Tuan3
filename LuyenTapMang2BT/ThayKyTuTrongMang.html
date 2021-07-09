@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    var count = 0;
+    var b = [];
+    var blength = parseInt(prompt("Nhập vào số lượng phần tử: "));
+    for (let i = 0; i < blength; i++) {
+        b[i] = prompt("Nhập vào thông tin cho chuỗi: ");
+    }
+
+    // document.write(b + "<br>");
+
+    for (let i = 0; i < b.length; i++) {
+        if (b[i] == '-') {
+            b.splice(i,1,'_');
+        }
+    }
+
+    document.write(b);
+</script>
+
+</html>
