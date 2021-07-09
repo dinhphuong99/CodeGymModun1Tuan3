@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var arr = [-1, 5, -3, -6, 2, 10, -1.5, 11, -3.1, -6, -12];
+
+    var negativeInteger = arr.filter(myFunction);
+    //document.write(negativeInteger + "<br>");
+    function myFunction(value, index, array) {
+        return (value < 0 && Number.isInteger(value));
+    }
+
+    let sum = negativeInteger.reduce(myFunction1);
+    function myFunction1(total, value) {
+        return total + value;
+    }
+
+    document.write(sum);
+</script>
+
+</html>
