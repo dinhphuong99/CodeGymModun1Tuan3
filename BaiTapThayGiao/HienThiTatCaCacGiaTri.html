@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var arr = [];
+    var number = 20;
+
+    var arrlength = 0;
+
+    // sinh 1 mangr 5,7 các giá trị ngẫu nhiên 10->90 
+
+    while (arrlength < number) {
+        arr[arrlength] = Math.floor((Math.random() * 16) + 10);
+        arrlength += 1;
+    }//đúng
+
+    document.write(`${arr} "<br>"`);
+
+    var numberToLookFor = parseInt(prompt("Nhập vào số cần tìm"));
+
+    var loCaTion = [-1];
+    var indexLocation = 0;
+    for (let index = 0; index < arr.length; index++) {
+
+        if (numberToLookFor == arr[index]) {
+            loCaTion[indexLocation] = index;
+            indexLocation = indexLocation+1;
+        }else if(index == arr.length)
+            loCaTion[0] = -1;
+    }
+    document.write(`Có số cần tìm ở vị trí: ${loCaTion}`);
+</script>
+</html>
